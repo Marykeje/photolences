@@ -1,0 +1,12 @@
+{
+  "name": "photolences",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass sass/main.scss css/style.css -w --source-map true"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
