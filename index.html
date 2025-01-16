@@ -10,20 +10,20 @@
   <body>
     <div class="main">
       <header class="header">
-        <!-- <div>
+        <div>
           <a href="">
             <img src="./imgs/small-logo.png" alt="" class="header__logo-img"
           /></a>
-        </div> -->
+        </div>
         <nav class="header__nav">
           <ul class="header__">
-            <!-- <a href="#"><li>Home</li></a>
+            <a href="#"><li>Home</li></a>
             <a href="#about"><li>About Us</li></a>
             <a href="#vision"><li>Vision</li></a>
             <a href="#events"><li>Events</li></a>
             <a href="./contact-us.html"
               ><li class="header__contact-us">Contact Us</li></a
-            > -->
+            >
           </ul>
         </nav>
       </header>
@@ -54,7 +54,7 @@
           </div>
         </div>
       </section>
-      <section class="photo-about container" id="">
+      <section class="photo-about container" id="about">
         <h2 class="heading photo-about__heading">Who we are</h2>
         <p class="photo-about__text">
           PhotoSceneLenses Africa is a non profit project under Unique Motion
@@ -72,7 +72,7 @@
           <img src="imgs/big-logo.png" alt="" class="photo-about__big-logo" />
         </div>
       </section>
-      <section class="photo-vision" id="">
+      <section class="photo-vision" id="vision">
         <img src="./imgs/hero-img4.jpg" alt="" class="photo-vision__bg-img" />
         <div class="container">
           <h2 class="heading photo-vision__heading-text">
@@ -281,12 +281,11 @@
           </div>
         </div>
       </section>
-
       <section class="photo-support">
         <div class="photo-support__support-body container">
           <div class="photo-support__support-details">
             <h2 class="photo-support__heading">How to support us</h2>
-            <div class="photo-support__">
+            <div class="photo-support__support-steps">
               <div class="photo-support__support-types">
                 <ion-icon
                   name="stats-chart"
@@ -297,48 +296,54 @@
                   Dreams
                 </p>
               </div>
-              <div>
-                <ion-icon name="people"></ion-icon>
+              <div class="photo-support__support-types">
+                <ion-icon
+                  name="people"
+                  class="photo-support__support-icon"
+                ></ion-icon>
                 <p>Volunteer to be part of our events & trainings</p>
               </div>
-              <div>
-                <img src="" alt="" />
+              <div class="photo-support__support-types">
+                <ion-icon
+                  name="mail-outline"
+                  class="photo-support__support-icon"
+                ></ion-icon>
                 <p>Donate Funds / Sponsor a Life</p>
               </div>
             </div>
           </div>
-          <div class="photo-support__basic-needs">
-            <h2 class="">Basic Needs</h2>
-            <div class="">
-              <div>
-                <ul>
-                  <li>Facilitators</li>
-                  <li>Training Venue / Materials</li>
-                  <li>Team accomodation / Logistic</li>
-                  <li>Training Equipment</li>
-                </ul>
-              </div>
-              <div>
-                <ul>
-                  <li>Transportation</li>
-                  <li>Feeding</li>
-                  <li>Project Funds</li>
-                  <li>Mentorship/maintenance fees</li>
-                </ul>
-              </div>
+          <div class="basic-needs">
+            <h2 class="basic-needs__needs-text">Basic Needs</h2>
+            <!-- <div class="basic-needs__needs-details"> -->
+            <div class="basic-needs__needs-list">
+              <ul>
+                <li>Facilitators</li>
+                <li>Training Venue / Materials</li>
+                <li>Team accomodation / Logistic</li>
+                <li>Training Equipment</li>
+                <!-- <div class="basic-needs__divider"></div> -->
+                <li>Transportation</li>
+                <li>Feeding</li>
+                <li>Project Funds</li>
+                <li>Mentorship/maintenance fees</li>
+              </ul>
             </div>
+            <!-- </div> -->
           </div>
         </div>
-        <a href="./contact-us.html"
-          ><li class="header__contact-us">Contact Us</li></a
-        >
-      </section>
+        <div class="photo-contact container">
+          <a href="./contact-us.html" class="photo-contact__contact-text"
+            >Contact Us
 
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </a>
+        </div>
+      </section>
       <footer class="footer container">
         <a href="">
           <img src="./imgs/small-logo.png" alt="" class="header__logo-img"
         /></a>
-        <p></p>
+        <p>&copy; photoscenlenses 2025</p>
       </footer>
     </div>
 

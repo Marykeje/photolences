@@ -23,7 +23,7 @@
     list-style: none;
     display: flex;
 
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 600;
     text-transform: capitalize;
     gap: 4rem;
@@ -356,52 +356,227 @@
 
 .photo-support {
   background-color: whitesmoke;
-  // color: #fff;
 
-  padding-top: 8rem;
-  padding-bottom: 8rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  // margin-top: 3rem;
 
   // display: flex;
   // flex-direction: column;
-  // justify-content: center;
-
-  &__heading {
-    font-size: 3rem;
-  }
-
-  &__chat-types {
-  }
-
-  &__support-icon {
-    display: block;
-    width: 6.4rem;
-    height: 6.4rem;
-  }
+  // gap: 4rem;
 
   &__support-body {
-    // display: grid;
-    // grid-template-columns: 1fr 1fr;
-    display: flex;
-    // flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    // display: flex;
+    // justify-content: space-between;
 
     & a {
       text-decoration: none;
       list-style: none;
     }
   }
+
+  &__support-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  &__heading {
+    font-size: 3rem;
+    font-family: "Poppins", serif;
+    background-color: rgb(65, 26, 26);
+    color: #ffffff;
+    border-top-left-radius: 0.8rem;
+    border-top-right-radius: 0.8rem;
+    padding: 1rem 0rem;
+
+    text-align: center;
+    // font-weight: normal;
+  }
+
+  &__support-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  &__support-types {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    & p {
+      font-size: 1.8rem;
+      color: rgb(65, 26, 26);
+    }
+  }
+
+  &__support-icon {
+    display: block;
+    width: 4rem;
+    height: 4rem;
+
+    color: rgb(65, 26, 26);
+  }
 }
 
 .basic-needs {
-  // background-color: rgb(65, 26, 26);
-  // color: #fff;
+  background-color: rgb(65, 26, 26);
+  color: #fff;
+  border-radius: 10px;
 
-  // padding: 5rem;
+  padding: 5rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  &__needs-list ul {
+    font-size: 1.8rem;
+    list-style: none;
+    line-height: 1.5;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3rem;
+  }
+
+  &__needs-text {
+    background-color: #ffffff;
+    color: rgb(65, 26, 26);
+    border-top-left-radius: 0.8rem;
+    border-top-right-radius: 0.8rem;
+    text-align: center;
+
+    padding: 1rem;
+    width: 20rem;
+  }
+
+  &__divider {
+    width: 2rem;
+    height: 100%;
+    color: #ffffff;
+  }
+}
+
+.photo-contact {
+  padding-top: 6rem;
+
+  display: flex;
+  justify-content: center;
+
+  & a {
+    text-decoration: none;
+    list-style: none;
+  }
+
+  &__contact-text {
+    font-size: 2rem;
+    font-family: "poppins" serif;
+    background-color: rgb(65, 26, 26);
+    color: #ffffff;
+    border-radius: 1rem;
+
+    cursor: pointer;
+
+    padding: 2rem 4rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+    width: 25rem;
+
+    &:hover {
+      background-color: rgb(121, 82, 82);
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+
+  margin-top: auto;
+
+  & p {
+    font-size: 1.8rem;
+  }
 }
 
 .contact-us {
+  position: relative;
+
   &__back-arrow {
     display: flex;
     align-items: center;
     gap: 2rem;
+
+    text-decoration: none;
+
+    padding-bottom: 3rem;
+
+    & p {
+      font-size: 1.8rem;
+      color: #1f1f1f;
+    }
+  }
+
+  &__body {
+    // position: relative;
+
+    // &::before {
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   width: 100%;
+    //   height: 80vh;
+    //   object-fit: cover;
+
+    //   background-color: rgba($color: #000000, $alpha: 0.4);
+    //   backdrop-filter: blur(8px);
+    //   content: "";
+    //   display: block;
+
+    //   z-index: -1;
+    // }
+  }
+
+  &__contact-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+  }
+
+  &__contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+    padding-top: 5rem;
+  }
+
+  &__heading {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    font-size: 2.4rem;
+    // color: #ffffff;
+  }
+
+  &__contact-links {
+    line-height: 2;
+
+    & p {
+      font-size: 1.8rem;
+      // color: #ffffff;
+    }
   }
 }
