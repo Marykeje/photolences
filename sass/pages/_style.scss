@@ -3,28 +3,25 @@
   align-items: center;
   justify-content: space-between;
 
-  // position: fixed;
-  // background-color: rgb(235, 168, 168);
+  background-color: whitesmoke;
+  padding: 2rem 15rem;
+
+  position: sticky;
+
   z-index: 1;
-
-  width: 100%;
-  // height: 100%;
-
-  max-width: 130rem;
-  margin: auto;
 
   &__logo-img {
     display: block;
-    width: 10rem;
-    height: auto;
+    width: 12rem;
+    height: 100%;
+    // max-height: 30rem;
   }
 
   &__nav ul {
+    font-weight: 500;
     list-style: none;
     display: flex;
 
-    font-size: 1.8rem;
-    font-weight: 600;
     text-transform: capitalize;
     gap: 4rem;
 
@@ -500,19 +497,32 @@
 .footer {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 5rem;
 
   margin-top: auto;
 
+  // background-color: rgb(65, 26, 26);
+  // color: #ffffff;
+
   & p {
     font-size: 1.8rem;
+    color: rgb(65, 26, 26);
+  }
+
+  &__photo-handles {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  &__handles-tower {
+    display: block;
+    width: 4.8rem;
   }
 }
 
 .contact-us {
-  position: relative;
-
   &__back-arrow {
     display: flex;
     align-items: center;
@@ -529,23 +539,25 @@
   }
 
   &__body {
-    // position: relative;
+    position: relative;
+    overflow: hidden;
+    height: 70vh;
 
-    // &::before {
-    //   position: absolute;
-    //   top: 0;
-    //   left: 0;
-    //   width: 100%;
-    //   height: 80vh;
-    //   object-fit: cover;
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
 
-    //   background-color: rgba($color: #000000, $alpha: 0.4);
-    //   backdrop-filter: blur(8px);
-    //   content: "";
-    //   display: block;
+      background-color: rgba($color: #000000, $alpha: 0.4);
+      backdrop-filter: blur(8px);
+      content: "";
+      display: block;
 
-    //   z-index: -1;
-    // }
+      z-index: -1;
+    }
   }
 
   &__contact-details {

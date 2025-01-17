@@ -4,19 +4,18 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 1;
-  width: 100%;
-  max-width: 130rem;
-  margin: auto; }
+  background-color: whitesmoke;
+  padding: 2rem 15rem;
+  position: sticky;
+  z-index: 1; }
   .header__logo-img {
     display: block;
-    width: 10rem;
-    height: auto; }
+    width: 12rem;
+    height: 100%; }
   .header__nav ul {
+    font-weight: 500;
     list-style: none;
     display: flex;
-    font-size: 1.8rem;
-    font-weight: 600;
     text-transform: capitalize;
     gap: 4rem; }
     .header__nav ul:hover {
@@ -323,41 +322,68 @@
 .footer {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 5rem;
   margin-top: auto; }
   .footer p {
-    font-size: 1.8rem; }
-
-.contact-us {
-  position: relative; }
-  .contact-us__back-arrow {
+    font-size: 1.8rem;
+    color: #411a1a; }
+  .footer__photo-handles {
     display: flex;
     align-items: center;
-    gap: 2rem;
-    text-decoration: none;
-    padding-bottom: 3rem; }
-    .contact-us__back-arrow p {
-      font-size: 1.8rem;
-      color: #1f1f1f; }
-  .contact-us__contact-details {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 6rem; }
-  .contact-us__contact-info {
-    display: flex;
-    flex-direction: column;
-    gap: 4rem;
-    padding-top: 5rem; }
-  .contact-us__heading {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    font-size: 2.4rem; }
-  .contact-us__contact-links {
-    line-height: 2; }
-    .contact-us__contact-links p {
-      font-size: 1.8rem; }
+    gap: 2rem; }
+  .footer__handles-tower {
+    display: block;
+    width: 4.8rem; }
+
+.contact-us__back-arrow {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  text-decoration: none;
+  padding-bottom: 3rem; }
+  .contact-us__back-arrow p {
+    font-size: 1.8rem;
+    color: #1f1f1f; }
+
+.contact-us__body {
+  position: relative;
+  overflow: hidden;
+  height: 70vh; }
+  .contact-us__body::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    content: "";
+    display: block;
+    z-index: -1; }
+
+.contact-us__contact-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem; }
+
+.contact-us__contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding-top: 5rem; }
+
+.contact-us__heading {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-size: 2.4rem; }
+
+.contact-us__contact-links {
+  line-height: 2; }
+  .contact-us__contact-links p {
+    font-size: 1.8rem; }
 
 * {
   margin: 0;
