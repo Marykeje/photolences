@@ -9,7 +9,7 @@
   // max-width: 130rem;
   // margin: 0 auto;
   height: 9rem;
-  padding: 0 9.6rem;
+  padding: 0 9rem;
   position: relative;
 
   // position: sticky;
@@ -132,7 +132,7 @@
       gap: 6.8rem;
     }
 
-    @media (max-width: 730px) {
+    @media (max-width: 740px) {
       grid-template-columns: 1fr;
     }
 
@@ -162,7 +162,7 @@
       font-size: 4rem;
     }
 
-    @media (max-width: 730px) {
+    @media (max-width: 740px) {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -445,6 +445,10 @@
     @media (max-width: 690px) {
       font-size: 1.8rem;
     }
+
+    @media (max-width: 450px) {
+      font-size: 1.6rem;
+    }
   }
 }
 
@@ -523,6 +527,10 @@
 
   @media (max-width: 690px) {
     padding: 2.4rem 1rem;
+  }
+
+  @media (max-width: 580px) {
+    padding: 2rem 0rem;
   }
 
   &::before {
@@ -675,6 +683,11 @@
 
     @media (max-width: 990px) {
       font-size: 2.4rem;
+    }
+
+    @media (max-width: 790px) {
+      font-size: 1.9rem;
+      padding: 0.8rem 0rem;
     }
   }
 
@@ -880,10 +893,14 @@
 
       text-decoration: none;
 
-      height: 6.4rem;
-      padding: 0 9.6rem;
+      // height: 6.4rem;
+      padding: 2rem 9rem;
       // padding-top: 1rem;
       // padding-bottom: 1rem;
+
+      @media (max-width: 560px) {
+        padding: 1.6rem 3rem;
+      }
     }
 
     & p {
@@ -910,7 +927,7 @@
       height: 100%;
       object-fit: cover;
 
-      background-color: rgba($color: #000000, $alpha: 0.1);
+      background-color: rgba($color: #000000, $alpha: 0.3);
       backdrop-filter: blur(12px);
       content: "";
       display: block;
@@ -920,48 +937,99 @@
   }
 
   &__contact-details {
-    // display: grid;
-    // grid-template-columns: 1fr 1fr;
-    // gap: 6rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
 
-    display: flex;
     align-items: center;
-    justify-content: space-between;
-    height: 80vh;
+
+    // padding-top: 7rem;
+    // padding-bottom: 7rem;
+
+   
+    height: 100vh;
+
+    @media (max-width: 1055px) {
+      gap: 4rem;
+    }
+
+    @media (max-width: 830px) {
+      // grid-template-columns: 1fr;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
   }
 
   &__contact-info {
     display: flex;
     flex-direction: column;
-    gap: 4rem;
+    gap: 2.4rem;
 
     & p {
       font-size: 2.4rem;
       font-weight: 600;
       text-transform: capitalize;
       color: #ffffff;
+
+      @media (max-width: 980px) {
+        font-size: 2rem;
+      }
+      @media (max-width: 410px) {
+        width: 100%;
+      }
     }
   }
 
   &__heading {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
 
     font-family: "poppins" serif;
     color: #ffffff;
 
     & h2 {
       font-size: 4.8rem;
+
+      @media (max-width: 980px) {
+        font-size: 4rem;
+      }
+
+      @media (max-width: 450px) {
+        font-size: 2.4rem;
+      }
     }
 
     & span {
       font-size: 2rem;
+      @media (max-width: 980px) {
+        font-size: 1.8rem;
+      }
+
+      @media (max-width: 450px) {
+        font-size: 1.4rem;
+      }
     }
   }
 
   &__contact-links {
     line-height: 2;
+  }
+
+  &__link-contact {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    // display: grid;
+    // grid-template-columns: 1fr 1fr;
+
+    @media (max-width: 410px) {
+      display: block;
+      // flex-direction: column;
+      // gap: 0rem;
+    }
 
     & p {
       font-size: 2rem;
@@ -969,18 +1037,36 @@
       color: rgb(65, 26, 26);
       font-weight: 600;
 
-      & a {
-        text-decoration: none;
-        // color: rgb(65, 26, 26);
-        color: #ffffff;
-        font-weight: 600;
+      @media (max-width: 980px) {
+        font-size: 1.7rem;
+      }
+
+      @media (max-width: 450px) {
+        font-size: 1.6rem;
+      }
+    }
+    & a {
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: 600;
+
+      @media (max-width: 450px) {
+        font-size: 1.6rem;
       }
     }
   }
 
   &__contact-img {
     & img {
-      height: 30rem;
+      display: block;
+      // height: 40rem;
+      height: 100%;
+      width: 100%;
+    }
+
+    @media (max-width: 830px) {
+      // width: 80%;
+      // height: ;
     }
   }
 }
