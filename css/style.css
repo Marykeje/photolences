@@ -8,7 +8,11 @@
   padding: 0 9rem;
   position: relative;
   z-index: 1; }
-  @media (max-width: 740px) {
+  @media (max-width: 980px) {
+    .header {
+      height: 7rem;
+      padding: 0 5rem; } }
+  @media (max-width: 730px) {
     .header {
       display: none; } }
   .header__logo-img {
@@ -18,19 +22,34 @@
     @media (max-width: 580px) {
       .header__logo-img {
         width: 9rem; } }
-  .header__nav ul {
-    font-size: 1.7rem;
-    font-weight: 600;
+  .header__nav-list {
     list-style: none;
     display: flex;
     align-items: center;
     text-transform: capitalize;
     gap: 4rem; }
-    .header__nav ul:hover {
-      color: #f5eeee; }
-    .header__nav ul a {
-      text-decoration: none;
-      color: #411a1a; }
+    @media (max-width: 800px) {
+      .header__nav-list {
+        gap: 2.4rem; } }
+    @media (max-width: 730px) {
+      .header__nav-list {
+        flex-direction: column;
+        gap: 4rem; } }
+  .header__nav-link:link,
+  .header :visited {
+    font-size: 1.7rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #411a1a; }
+    @media (max-width: 980px) {
+      .header__nav-link:link,
+      .header :visited {
+        font-size: 1.5rem; } }
+    .header__nav-link:link:hover,
+    .header__nav-link:link :active,
+    .header :visited:hover,
+    .header :visited :active {
+      color: #693b3b; }
   .header__contact-us {
     background-color: #411a1a;
     color: #ffffff;
@@ -38,6 +57,13 @@
     padding: 1rem 2rem; }
     .header__contact-us:hover {
       background-color: #553b3b; }
+  .header__mobile-view {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    display: none; }
+  .header__nav-icon {
+    font-size: 3.5rem; }
 
 /* STICKY NAVIGATION */
 .container {
