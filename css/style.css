@@ -130,6 +130,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         font-size: 5rem; } }
     @media (max-width: 580px) {
       .hero-section__left-sec {
@@ -137,6 +138,9 @@
     @media (max-width: 410px) {
       .hero-section__left-sec {
         font-size: 2.8rem; } }
+    @media (max-width: 390px) {
+      .hero-section__left-sec {
+        font-size: 2.5rem; } }
   .hero-section__right-sec {
     display: flex;
     flex-direction: column;
@@ -602,6 +606,16 @@
   @media (max-width: 460px) {
     .footer {
       gap: 5px; } }
+  @media (max-width: 365px) {
+    .footer {
+      display: grid;
+      grid-template-columns: auto auto;
+      column-gap: 2rem;
+      row-gap: 1rem; } }
+  @media (max-width: 310px) {
+    .footer {
+      grid-template-columns: auto;
+      gap: 1rem; } }
   .footer p {
     font-size: 1.8rem;
     color: #411a1a; }

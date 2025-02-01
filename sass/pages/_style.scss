@@ -201,6 +201,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
 
       font-size: 5rem;
     }
@@ -211,6 +212,10 @@
 
     @media (max-width: 410px) {
       font-size: 2.8rem;
+    }
+
+    @media (max-width: 390px) {
+      font-size: 2.5rem;
     }
   }
 
@@ -881,6 +886,24 @@
     gap: 5px;
   }
 
+  @media (max-width: 365px) {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 2rem;
+    row-gap: 1rem;
+  }
+
+  @media (max-width: 310px) {
+    grid-template-columns: auto;
+    gap: 1rem;
+  }
+
+  &__logoo {
+    @media (max-width: 390px) {
+      // display: none;
+    }
+  }
+
   & p {
     font-size: 1.8rem;
     color: rgb(65, 26, 26);
@@ -897,6 +920,11 @@
 
     @media (max-width: 580px) {
       gap: 1rem;
+    }
+
+    @media (max-width: 390px) {
+      // justify-content: center;
+      // align-items: center;
     }
   }
 
