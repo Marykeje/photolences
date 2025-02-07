@@ -16,10 +16,6 @@
     padding: 0 5rem;
   }
 
-  @media (max-width: 730px) {
-    display: none;
-  }
-
   &__logo-img {
     display: block;
     width: 10rem;
@@ -42,9 +38,25 @@
       gap: 2.4rem;
     }
 
-    @media (max-width: 730px) {
+    @media (max-width: 690px) {
       flex-direction: column;
       gap: 4rem;
+
+      // background-color: whitesmoke;
+      background-color: rgba($color: #ffffff, $alpha: 0.9);
+      padding: 2rem;
+
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50%;
+      z-index: 999;
+
+      margin-top: 7rem;
+    }
+
+    @media (max-width: 730px) {
+      // display: none;
     }
   }
 
@@ -82,18 +94,19 @@
   // mobile nav
 
   &__mobile-view {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-
-    display: none;
-
-    @media (max-width: 730px) {
-    }
+    // display: flex;
+    // align-items: center;
+    // gap: 1rem;
   }
 
   &__nav-icon {
-    font-size: 3.5rem;
+    display: none;
+
+    @media (max-width: 690px) {
+      display: block;
+      font-size: 4rem;
+      color: rgb(65, 26, 26);
+    }
   }
 }
 
