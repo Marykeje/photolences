@@ -985,14 +985,14 @@
   &__handles-icon {
     display: block;
 
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     background-color: rgb(65, 26, 26);
     color: #ffffff;
     border-radius: 0.8rem;
     padding: 0.8rem;
 
     @media (max-width: 580px) {
-      font-size: 1.4rem;
+      // font-size: 1.4rem;
       padding: 6px;
     }
   }
