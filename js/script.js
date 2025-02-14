@@ -15,21 +15,25 @@
 // Sticky Navigation
 // const sectionHeroEl = document.querySelector(".section-hero");
 
-const navLinks = document.querySelector(".header__nav-list");
-navLinks.forEach(function (link) {
-  link.addEventListener("click", function (e) {
-    e.preventDefault();
-    const href = link.getAttribute("href");
-    console.log(href);
-  });
+// const navMenuEl = document.querySelector("nav-mobile");
+// const headerEl = document.querySelector("header");
+// // for click event
+// navMenuEl.addEventListerner("click", function () {
+//   headerEl.classList.toggle(".nav-open");
+//  });
+
+const navToggle = document.querySelector(".header__nav-btn");
+const navList = document.querySelector(".header__nav-list");
+
+navToggle.addEventListener("click", function () {
+  navList.classList.toggle("nav-open");
+  navToggle.classList.toggle("nav-open");
 });
 
-// function navLink() {
-//   // console.log("hey")
-//   const aLinks = document.getElementByClass("header__nav-list");
-//   if (aLinks.style.display === "block") {
-//     aLinks.style.display = "none";
-//   } else {
-//     aLinks.style.display = "block";
-//   }
-// }
+const hero = document.querySelector('.hero-section');
+
+const obs = new IntersectionObserver(
+  function () {
+    
+  }
+)

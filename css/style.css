@@ -9,12 +9,17 @@
   height: 9rem;
   padding: 0 9rem;
   width: 100%;
-  position: fixed;
-  z-index: 1; }
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 999; }
   @media (max-width: 980px) {
     .header {
       height: 7rem;
       padding: 0 5rem; } }
+  @media (max-width: 420px) {
+    .header {
+      padding: 0 3rem; } }
   .header__logo-img {
     display: block;
     width: 10rem;
@@ -31,20 +36,26 @@
     @media (max-width: 800px) {
       .header__nav-list {
         gap: 2.4rem; } }
-    @media (max-width: 690px) {
+    @media (max-width: 700px) {
       .header__nav-list {
         flex-direction: column;
         gap: 4rem;
         background-color: whitesmoke;
         background-color: rgba(255, 255, 255, 0.9);
-        padding: 2rem;
+        padding: 5rem 2rem 0rem;
         position: absolute;
         top: 0;
         right: 0;
-        width: 50%;
+        width: 70%;
+        height: 60vh;
         z-index: 999;
         margin-top: 7rem;
-        display: none; } }
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.4s ease-out; }
+        .header__nav-list.nav-open {
+          opacity: 1;
+          visibility: visible; } }
   .header__nav-link:link,
   .header :visited {
     font-size: 1.7rem;
@@ -59,23 +70,50 @@
     .header__nav-link:link :active,
     .header :visited:hover,
     .header :visited :active {
-      color: #693b3b; }
+      color: #9b1616; }
   .header__contact-us {
     background-color: #411a1a;
     color: #ffffff;
     border-radius: 0.8rem;
-    padding: 1rem 2rem; }
+    padding: 1rem 2rem;
+    z-index: 999; }
+    .header__contact-us a {
+      text-decoration: none; }
     .header__contact-us:hover {
       background-color: #553b3b; }
-  .header__hamburger {
+  .header__nav-btn {
     display: none; }
-    @media (max-width: 690px) {
-      .header__hamburger {
+    .header__nav-btn [name="close-outline"] {
+      display: none; }
+    .header__nav-btn [name="menu-outline"] {
+      display: block; }
+    @media (max-width: 700px) {
+      .header__nav-btn {
         display: block;
+        position: relative;
         font-size: 4rem;
-        color: #411a1a; } }
+        color: #411a1a;
+        background: none;
+        border: none; }
+        .header__nav-btn.nav-open [name="close-outline"] {
+          display: block; }
+        .header__nav-btn.nav-open [name="menu-outline"] {
+          display: none; } }
+    @media (max-width: 420px) {
+      .header__nav-btn {
+        font-size: 3.5rem; } }
 
 /* STICKY NAVIGATION */
+.sticky .header {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  padding-top: 0;
+  padding-bottom: 0;
+  z-index: 999;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03); }
+
 .container {
   max-width: 130rem;
   margin: auto;
@@ -119,7 +157,8 @@
         gap: 6.8rem; } }
     @media (max-width: 740px) {
       .hero-section__hero-content {
-        grid-template-columns: 1fr; } }
+        grid-template-columns: 1fr;
+        padding-top: 12rem; } }
     @media (max-width: 580px) {
       .hero-section__hero-content {
         gap: 4rem; } }
@@ -609,30 +648,18 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 5rem;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem; }
-  @media (max-width: 580px) {
+  @media (max-width: 660px) {
     .footer {
-      padding-top: 1rem;
-      padding-bottom: 1rem; } }
-  @media (max-width: 460px) {
-    .footer {
-      gap: 5px; } }
-  @media (max-width: 365px) {
-    .footer {
-      display: grid;
-      grid-template-columns: auto auto;
-      column-gap: 2rem;
-      row-gap: 1rem; } }
-  @media (max-width: 310px) {
-    .footer {
-      grid-template-columns: auto;
+      flex-direction: column;
       gap: 1rem; } }
   .footer p {
     font-size: 1.8rem;
-    color: #411a1a; }
-    @media (max-width: 580px) {
+    color: #411a1a;
+    justify-content: center;
+    text-align: center; }
+    @media (max-width: 660px) {
       .footer p {
         font-size: 1.4rem; } }
   .footer__photo-handles {
@@ -642,6 +669,16 @@
     @media (max-width: 580px) {
       .footer__photo-handles {
         gap: 1rem; } }
+  .footer__text {
+    font-size: 1.8rem;
+    color: #411a1a;
+    text-align: center; }
+    @media (max-width: 660px) {
+      .footer__text {
+        font-size: 1.4rem; } }
+    @media (max-width: 370px) {
+      .footer__text {
+        line-break: loose; } }
   .footer__handles-icon {
     display: block;
     font-size: 1.5rem;
@@ -782,7 +819,9 @@
   box-sizing: border-box; }
 
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  overflow-x: hidden; }
 
 body {
   font-size: 1.6rem;
